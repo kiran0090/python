@@ -7,36 +7,48 @@ while True:
 	choice = input('   ')
 	print(f'\nYour choice is:{choice}\n')
 
-	if choice == '1':
-		num1 = input('Enter the first number:')
-		num2 = input('Enter the second number:')
+	def add():
+		num1 = float(input('Enter the 1st number:'))
+		num2 = float(input('Enter the 2nd number:'))
 		result = num1 + num2
 		print(f'The Sum of {num1} and {num2} : {result}\n')
-
-	elif choice == '2':
-		num1 = int(input('Enter the first number:'))
-		num2 = int(input('Enter the second number:'))
+		return add
+	def multi():
+		num1 = float(input('Enter the 1st number:'))
+		num2 = float(input('Enter the 2nd number:'))
+		result = num1 * num2
+		print(f'The Sum of {num1} and {num2} : {result}\n')
+		return multi
+	def sub():
+		num1 = float(input('Enter the first number:'))
+		num2 = float(input('Enter the second number:'))
 		result = num1 - num2
 		if num1 > num2:
 			result = num1 - num2
 		else:
 			result = num2 - num1
 			print(f'The Difference of {num1} and {num2} : {result}\n')
+		return sub
+	def div():
+		num1 = float(input('Enter the 1st number:'))
+		num2 = float(input('Enter the 2nd number:'))
+		result = num1 / num2
+		print(f'The Sum of {num1} and {num2} : {result}\n')
+		return div	
 
+
+	if choice == '1':
+		add()
+		
+
+	elif choice == '2':
+		sub()
+		
 	elif choice == '3':
-		num1 = int(input('Enter the first number:'))
-		num2 = int(input('Enter the second number:'))
-		result = num1 * num2	
-		print(f'The Multiplication of {num1} and {num2} : {result}\n')
+		multi()
 
 	elif choice == '4':
-		num1 = int(input('Enter the first number:'))
-		num2 = int(input('Enter the second number:'))
-		result = num1 / num2
-		if num1 == '0':
-			print('Enter valid number\n')
-		else:
-			print(f'The Division of {num1} and {num2} : {result}\n')
+		div()
 
 	elif choice == '5':
 		exit()
