@@ -1,10 +1,4 @@
-# # p = (2, 3, 'r')
-# # print(p * 2)
-
-# def add(a, b):
-# 	return a+4, b+3
-# result = add(3, 4)
-# print(result)
+import time
 
 print('Welcome to MY_BANK ATM')
 restart = ('y')
@@ -49,6 +43,7 @@ while chances >= 0:
 					break
 			elif option == 4:
 				print('Please wait..')
+				time.sleep(3)
 				print('Thank You for your service')
 				break
 	else:
